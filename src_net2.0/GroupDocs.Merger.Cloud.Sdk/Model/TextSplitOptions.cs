@@ -36,7 +36,7 @@ namespace GroupDocs.Merger.Cloud.Sdk.Model
     /// <summary>
     /// Defines options for text file Split operation             
     /// </summary>  
-    public class TextSplitOptions : SplitOptions 
+    public class TextSplitOptions : Options 
     {                       
         /// <summary>
         /// Text file split mode

@@ -54,7 +54,7 @@ namespace GroupDocs.Merger.Cloud.Sdk.Model
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// Indicates whether page is visibile or not
+        /// Indicates whether page is visible or not
         /// </summary>  
         public bool? Visible { get; set; }
 

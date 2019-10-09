@@ -133,7 +133,6 @@
     <Compile Include="Model\PreviewOptions.cs" />
     <Compile Include="Model\RemoveOptions.cs" />
     <Compile Include="Model\RotateOptions.cs" />
-    <Compile Include="Model\SplitOptions.cs" />
     <Compile Include="Model\StorageExist.cs" />
     <Compile Include="Model\StorageFile.cs" />
     <Compile Include="Model\SwapOptions.cs" />

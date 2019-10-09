@@ -161,9 +161,7 @@ namespace GroupDocs.Merger.Cloud.Sdk.Test.Api
             {
                 FileInfo = testFile.ToFileInfo(),
                 OutputPath = Path.Combine(DefaultOutputPath, testFile.FileName),
-                PageOptions = new PageOptions { 
-                    Pages = new List<int?> { 2, 4 }
-                },
+                Pages = new List<int?> { 2, 4 },
                 PageSplitMode = PageSplitOptions.PageSplitModeEnum.Pages
             };
             var request = new SplitRequest(options);
@@ -183,10 +181,7 @@ namespace GroupDocs.Merger.Cloud.Sdk.Test.Api
             {
                 FileInfo = testFile.ToFileInfo(),
                 OutputPath = Path.Combine(DefaultOutputPath, testFile.FileName),
-                PageOptions = new PageOptions
-                {
-                    Pages = new List<int?> { 2, 4 }
-                },
+                Pages = new List<int?> { 2, 4 },
                 PageSplitMode = PageSplitOptions.PageSplitModeEnum.Pages
             };
             var request = new SplitRequest(options);

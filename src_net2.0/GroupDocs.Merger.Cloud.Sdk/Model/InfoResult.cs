@@ -49,7 +49,7 @@ namespace GroupDocs.Merger.Cloud.Sdk.Model
         public List<PageInfo> Pages { get; set; }
 
         /// <summary>
-        /// Document size
+        /// Document size in bytes
         /// </summary>  
         public long? Size { get; set; }
 

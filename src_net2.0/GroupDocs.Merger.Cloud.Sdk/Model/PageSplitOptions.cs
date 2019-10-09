@@ -36,7 +36,7 @@ namespace GroupDocs.Merger.Cloud.Sdk.Model
     /// <summary>
     /// Defines options for document Split operation
     /// </summary>  
-    public class PageSplitOptions : SplitOptions 
+    public class PageSplitOptions : PageOptions 
     {                       
         /// <summary>
         /// Document split mode
@@ -62,11 +62,6 @@ namespace GroupDocs.Merger.Cloud.Sdk.Model
         public PageSplitModeEnum? PageSplitMode { get; set; }
 
         /// <summary>
-        /// Pages range description
-        /// </summary>  
-        public PageOptions PageOptions { get; set; }
-
-        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -74,7 +69,6 @@ namespace GroupDocs.Merger.Cloud.Sdk.Model
         {
           var sb = new StringBuilder();
           sb.Append("class PageSplitOptions {\n");
-          sb.Append("  PageOptions: ").Append(this.PageOptions).Append("\n");
           sb.Append("  PageSplitMode: ").Append(this.PageSplitMode).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
