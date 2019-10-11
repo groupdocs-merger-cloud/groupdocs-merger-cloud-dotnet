@@ -157,12 +157,12 @@ namespace GroupDocs.Merger.Cloud.Sdk.Test.Api
         {
             // Arrange
             var testFile = TestFiles.FourPagesDocx;
-            var options = new PageSplitOptions
+            var options = new SplitOptions
             {
                 FileInfo = testFile.ToFileInfo(),
                 OutputPath = Path.Combine(DefaultOutputPath, testFile.FileName),
                 Pages = new List<int?> { 2, 4 },
-                PageSplitMode = PageSplitOptions.PageSplitModeEnum.Pages
+                Mode = SplitOptions.ModeEnum.Pages
             };
             var request = new SplitRequest(options);
 
@@ -177,32 +177,12 @@ namespace GroupDocs.Merger.Cloud.Sdk.Test.Api
         {
             // Arrange
             var testFile = TestFiles.PasswordProtectedDocx;
-            var options = new PageSplitOptions
+            var options = new SplitOptions
             {
                 FileInfo = testFile.ToFileInfo(),
                 OutputPath = Path.Combine(DefaultOutputPath, testFile.FileName),
                 Pages = new List<int?> { 2, 4 },
-                PageSplitMode = PageSplitOptions.PageSplitModeEnum.Pages
-            };
-            var request = new SplitRequest(options);
-
-            // Act & Assert
-            var result = DocumentApi.Split(request);
-
-            Assert.AreEqual(2, result.Documents.Count);
-        }
-
-        [Test]
-        public void TestSplitLines()
-        {
-            // Arrange
-            var testFile = TestFiles.Txt;
-            var options = new TextSplitOptions
-            {
-                FileInfo = testFile.ToFileInfo(),
-                OutputPath = Path.Combine(DefaultOutputPath, testFile.FileName),
-                LineNumbers = new List<int?> { 2, 4 },
-                TextSplitMode = TextSplitOptions.TextSplitModeEnum.Lines
+                Mode = SplitOptions.ModeEnum.Pages
             };
             var request = new SplitRequest(options);
 
@@ -389,7 +369,7 @@ namespace GroupDocs.Merger.Cloud.Sdk.Test.Api
 
             var options = new JoinOptions
             {
-                Items = new List<JoinItem> { item1, item2 },
+                JoinItems = new List<JoinItem> { item1, item2 },
                 OutputPath = Path.Combine(DefaultOutputPath, "joined.docx")
             };
 

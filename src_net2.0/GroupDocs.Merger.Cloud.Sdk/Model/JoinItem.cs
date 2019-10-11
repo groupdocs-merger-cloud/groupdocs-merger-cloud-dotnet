@@ -72,7 +72,7 @@ namespace GroupDocs.Merger.Cloud.Sdk.Model
         public FileInfo FileInfo { get; set; }
 
         /// <summary>
-        /// List of page numbers to use in a Join operation. Note: first page should have number 1.
+        /// List of page numbers to use in a Join operation. NOTE: page numbering starts from 1.
         /// </summary>  
         public List<int?> Pages { get; set; }
 

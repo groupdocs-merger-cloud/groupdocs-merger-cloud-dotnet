@@ -41,7 +41,7 @@ namespace GroupDocs.Merger.Cloud.Sdk.Model
         /// <summary>
         /// Documents descriptions for Join operation
         /// </summary>  
-        public List<JoinItem> Items { get; set; }
+        public List<JoinItem> JoinItems { get; set; }
 
         /// <summary>
         /// The output path
@@ -56,7 +56,7 @@ namespace GroupDocs.Merger.Cloud.Sdk.Model
         {
           var sb = new StringBuilder();
           sb.Append("class JoinOptions {\n");
-          sb.Append("  Items: ").Append(this.Items).Append("\n");
+          sb.Append("  JoinItems: ").Append(this.JoinItems).Append("\n");
           sb.Append("  OutputPath: ").Append(this.OutputPath).Append("\n");
           sb.Append("}\n");
           return sb.ToString();

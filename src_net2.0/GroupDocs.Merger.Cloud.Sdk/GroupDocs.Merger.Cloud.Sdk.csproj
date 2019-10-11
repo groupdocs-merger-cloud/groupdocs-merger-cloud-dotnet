@@ -128,15 +128,14 @@
     <Compile Include="Model\OrientationOptions.cs" />
     <Compile Include="Model\PageInfo.cs" />
     <Compile Include="Model\PageOptions.cs" />
-    <Compile Include="Model\PageSplitOptions.cs" />
     <Compile Include="Model\PasswordResult.cs" />
     <Compile Include="Model\PreviewOptions.cs" />
     <Compile Include="Model\RemoveOptions.cs" />
     <Compile Include="Model\RotateOptions.cs" />
+    <Compile Include="Model\SplitOptions.cs" />
     <Compile Include="Model\StorageExist.cs" />
     <Compile Include="Model\StorageFile.cs" />
     <Compile Include="Model\SwapOptions.cs" />
-    <Compile Include="Model\TextSplitOptions.cs" />
     <Compile Include="Model\UpdatePasswordOptions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

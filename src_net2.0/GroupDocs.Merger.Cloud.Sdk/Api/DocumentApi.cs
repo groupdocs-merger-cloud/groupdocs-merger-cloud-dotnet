@@ -327,15 +327,15 @@ namespace GroupDocs.Merger.Cloud.Sdk.Model.Requests
           /// <summary>
           /// Initializes a new instance of the <see cref="SplitRequest"/> class.
           /// </summary>
-          /// <param name="options">PageSplitOptions or TextSplitOptions</param>
-          public SplitRequest(Options options)             
+          /// <param name="options">SplitOptions</param>
+          public SplitRequest(SplitOptions options)             
           {
               this.options = options;
           }
           
           /// <summary>
-          /// PageSplitOptions or TextSplitOptions
+          /// SplitOptions
           /// </summary>  
-          public Options options { get; set; }
+          public SplitOptions options { get; set; }
     }
 }

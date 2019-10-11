@@ -67,7 +67,7 @@ namespace GroupDocs.Merger.Cloud.Sdk.Model
         public RangeModeEnum? RangeMode { get; set; }
 
         /// <summary>
-        /// List of page numbers to use in a specific API method. Note: first page should have number 1.
+        /// List of page numbers to use in a specific API method. NOTE: page numbering starts from 1.
         /// </summary>  
         public List<int?> Pages { get; set; }
 

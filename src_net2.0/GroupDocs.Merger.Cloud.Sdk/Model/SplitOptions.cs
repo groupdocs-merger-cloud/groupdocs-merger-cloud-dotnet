@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose Pty Ltd" file="TextSplitOptions.cs">
+// <copyright company="Aspose Pty Ltd" file="SplitOptions.cs">
 //  Copyright (c) 2003-2019 Aspose Pty Ltd
 // </copyright>
 // <summary>
@@ -34,37 +34,32 @@ namespace GroupDocs.Merger.Cloud.Sdk.Model
     using Newtonsoft.Json.Converters;
     
     /// <summary>
-    /// Defines options for text file Split operation             
+    /// Defines options for document Split operation
     /// </summary>  
-    public class TextSplitOptions : Options 
+    public class SplitOptions : PageOptions 
     {                       
         /// <summary>
-        /// Text file split mode
+        /// Document split mode
         /// </summary>
-        /// <value>Text file split mode</value>
+        /// <value>Document split mode</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum TextSplitModeEnum
+        public enum ModeEnum
         { 
             /// <summary>
-            /// Enum Lines for "Lines"
+            /// Enum Pages for "Pages"
             /// </summary>            
-            Lines,
+            Pages,
             
             /// <summary>
-            /// Enum LinesIntervals for "LinesIntervals"
+            /// Enum Intervals for "Intervals"
             /// </summary>            
-            LinesIntervals            
+            Intervals            
         }
 
         /// <summary>
-        /// Text file split mode
+        /// Document split mode
         /// </summary>
-        public TextSplitModeEnum? TextSplitMode { get; set; }
-
-        /// <summary>
-        /// Line numbers collection
-        /// </summary>  
-        public List<int?> LineNumbers { get; set; }
+        public ModeEnum? Mode { get; set; }
 
         /// <summary>
         /// Get the string presentation of the object
@@ -73,9 +68,8 @@ namespace GroupDocs.Merger.Cloud.Sdk.Model
         public override string ToString()  
         {
           var sb = new StringBuilder();
-          sb.Append("class TextSplitOptions {\n");
-          sb.Append("  TextSplitMode: ").Append(this.TextSplitMode).Append("\n");
-          sb.Append("  LineNumbers: ").Append(this.LineNumbers).Append("\n");
+          sb.Append("class SplitOptions {\n");
+          sb.Append("  Mode: ").Append(this.Mode).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
         }
