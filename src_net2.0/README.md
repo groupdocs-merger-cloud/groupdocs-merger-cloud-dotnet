@@ -1,6 +1,7 @@
 # GroupDocs.Merger Cloud SDK for .NET
 This repository contains GroupDocs.Merger Cloud SDK for .NET source code. This SDK allows you to work with GroupDocs.Merger Cloud REST APIs in your .NET applications.
 
+GroupDocs.Merger Cloud allows you to merge documents and manipulate document structure across wide range of supported document types - PDF, DOCX/DOC, PPTX/PPT, XLSX/XLS, VSDX/VSD, ODT, ODS, ODP, HTML, EPUB and many others. Merge several documents into one, split single document to multiple documents, reorder or replace document pages, change page orientation, manage document password and perform other manipulations with GroupDocs.Merger Cloud API.
 ## How to use the SDK?
 The complete source code is available in this repository folder, you can either directly use it in your project via NuGet package manager. For more details, please visit our [documentation website](https://docs.groupdocs.cloud/display/mergercloud/Available+SDKs#AvailableSDKs-.NET).
 
