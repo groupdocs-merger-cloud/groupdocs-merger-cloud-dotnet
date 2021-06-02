@@ -1,6 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose Pty Ltd">
-//  Copyright (c) 2003-2020 Aspose Pty Ltd
+//  Copyright (c) 2003-2021 Aspose Pty Ltd
 // </copyright>
 // <summary>
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -377,6 +377,53 @@ namespace GroupDocs.Merger.Cloud.Sdk.Test.Api
 
             // Act & Assert
             var result = DocumentApi.Join(request);
+
+            Assert.AreEqual(options.OutputPath, result.Path);
+        }
+
+        [Test]
+        public void TestJoinCrossFormat()
+        {
+            // Arrange
+            var item1 = new JoinItem
+            {
+                FileInfo = TestFiles.OnePageProtectedPdf.ToFileInfo()
+            };
+            var item2 = new JoinItem
+            {
+                FileInfo = TestFiles.FourPagesDocx.ToFileInfo()
+            };
+
+            var options = new JoinOptions
+            {
+                JoinItems = new List<JoinItem> { item1, item2 },
+                OutputPath = Path.Combine(DefaultOutputPath, "joined.pdf")
+            };
+
+            var request = new JoinRequest(options);
+
+            // Act & Assert
+            var result = DocumentApi.Join(request);
+
+            Assert.AreEqual(options.OutputPath, result.Path);
+        }
+
+
+        [Test]
+        public void TestImport()
+        {
+            // Arrange
+            var options = new ImportOptions
+            {
+                FileInfo = TestFiles.OnePageProtectedPdf.ToFileInfo(),
+                Attachments = new List<string> { TestFiles.Txt.FullName },
+                OutputPath = Path.Combine(DefaultOutputPath, "with-attachment.pdf")
+            };
+
+            var request = new ImportRequest(options);
+
+            // Act & Assert
+            var result = DocumentApi.Import(request);
 
             Assert.AreEqual(options.OutputPath, result.Path);
         }

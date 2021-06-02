@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose Pty Ltd" file="ApiInvoker.cs">
-//  Copyright (c) 2003-2020 Aspose Pty Ltd
+//  Copyright (c) 2003-2021 Aspose Pty Ltd
 // </copyright>
 // <summary>
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -192,7 +192,7 @@ namespace GroupDocs.Merger.Cloud.Sdk.Client
             byte[] formData = null;
             if (formParams.Count > 0)
             {
-                string formDataBoundary = "GroupDocsViewerForCloud_NETSDKFormBoundary";
+                string formDataBoundary = "GroupDocsMergerForCloud_NETSDKFormBoundary";
                 client.ContentType = "multipart/form-data; boundary=" + formDataBoundary;
 
                 if (formParams.Count > 1)

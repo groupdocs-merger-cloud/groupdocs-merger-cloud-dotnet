@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose Pty Ltd" file="PagesApi.cs">
-//  Copyright (c) 2003-2020 Aspose Pty Ltd
+//  Copyright (c) 2003-2021 Aspose Pty Ltd
 // </copyright>
 // <summary>
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -278,7 +278,7 @@ namespace GroupDocs.Merger.Cloud.Sdk.Api
 }
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose Pty Ltd" file="ExtractRequest.cs">
-//  Copyright (c) 2003-2020 Aspose Pty Ltd
+//  Copyright (c) 2003-2021 Aspose Pty Ltd
 // </copyright>
 // <summary>
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -334,7 +334,7 @@ namespace GroupDocs.Merger.Cloud.Sdk.Model.Requests
 }
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose Pty Ltd" file="MoveRequest.cs">
-//  Copyright (c) 2003-2020 Aspose Pty Ltd
+//  Copyright (c) 2003-2021 Aspose Pty Ltd
 // </copyright>
 // <summary>
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -390,7 +390,7 @@ namespace GroupDocs.Merger.Cloud.Sdk.Model.Requests
 }
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose Pty Ltd" file="OrientationRequest.cs">
-//  Copyright (c) 2003-2020 Aspose Pty Ltd
+//  Copyright (c) 2003-2021 Aspose Pty Ltd
 // </copyright>
 // <summary>
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -446,7 +446,7 @@ namespace GroupDocs.Merger.Cloud.Sdk.Model.Requests
 }
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose Pty Ltd" file="RemoveRequest.cs">
-//  Copyright (c) 2003-2020 Aspose Pty Ltd
+//  Copyright (c) 2003-2021 Aspose Pty Ltd
 // </copyright>
 // <summary>
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -502,7 +502,7 @@ namespace GroupDocs.Merger.Cloud.Sdk.Model.Requests
 }
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose Pty Ltd" file="RotateRequest.cs">
-//  Copyright (c) 2003-2020 Aspose Pty Ltd
+//  Copyright (c) 2003-2021 Aspose Pty Ltd
 // </copyright>
 // <summary>
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -558,7 +558,7 @@ namespace GroupDocs.Merger.Cloud.Sdk.Model.Requests
 }
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose Pty Ltd" file="SwapRequest.cs">
-//  Copyright (c) 2003-2020 Aspose Pty Ltd
+//  Copyright (c) 2003-2021 Aspose Pty Ltd
 // </copyright>
 // <summary>
 //  Permission is hereby granted, free of charge, to any person obtaining a copy

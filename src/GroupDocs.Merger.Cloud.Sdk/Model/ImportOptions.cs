@@ -1,5 +1,5 @@
-﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose Pty Ltd" file="Config.cs">
+// --------------------------------------------------------------------------------------------------------------------
+// <copyright company="Aspose Pty Ltd" file="ImportOptions.cs">
 //  Copyright (c) 2003-2021 Aspose Pty Ltd
 // </copyright>
 // <summary>
@@ -23,13 +23,37 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace GroupDocs.Merger.Cloud.Sdk.Test
+namespace GroupDocs.Merger.Cloud.Sdk.Model 
 {
-    public static class Config
-    {
-        /* Get your AppSID and AppKey at https://dashboard.groupdocs.cloud/ (free registration is required) */
-        public static string AppSid = "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX";
-        public static string AppKey = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-        public static string ApiBaseUrl = "https://api.groupdocs.cloud";
+    using System;  
+    using System.Collections;
+    using System.Collections.Generic;
+    using System.Runtime.Serialization;
+    using System.Text;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+    
+    /// <summary>
+    /// Import API options
+    /// </summary>  
+    public class ImportOptions : Options 
+    {                       
+        /// <summary>
+        /// List of files paths to import as attachments
+        /// </summary>  
+        public List<string> Attachments { get; set; }
+
+        /// <summary>
+        /// Get the string presentation of the object
+        /// </summary>
+        /// <returns>String presentation of the object</returns>
+        public override string ToString()  
+        {
+          var sb = new StringBuilder();
+          sb.Append("class ImportOptions {\n");
+          sb.Append("  Attachments: ").Append(this.Attachments).Append("\n");
+          sb.Append("}\n");
+          return sb.ToString();
+        }
     }
 }
