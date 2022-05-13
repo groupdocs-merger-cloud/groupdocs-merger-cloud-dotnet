@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose Pty Ltd" file="JoinItem.cs">
-//  Copyright (c) 2003-2021 Aspose Pty Ltd
+//  Copyright (c) 2003-2022 Aspose Pty Ltd
 // </copyright>
 // <summary>
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -62,9 +62,32 @@ namespace GroupDocs.Merger.Cloud.Sdk.Model
         }
 
         /// <summary>
+        /// Allows to join word documents without empty space between documents
+        /// </summary>
+        /// <value>Allows to join word documents without empty space between documents</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum WordJoinModeEnum
+        { 
+            /// <summary>
+            /// Enum Default for "Default"
+            /// </summary>            
+            Default,
+            
+            /// <summary>
+            /// Enum Continuous for "Continuous"
+            /// </summary>            
+            Continuous            
+        }
+
+        /// <summary>
         /// Range mode. Ignored if Pages collection is not empty. Default value is AllPages.
         /// </summary>
         public RangeModeEnum? RangeMode { get; set; }
+
+        /// <summary>
+        /// Allows to join word documents without empty space between documents
+        /// </summary>
+        public WordJoinModeEnum? WordJoinMode { get; set; }
 
         /// <summary>
         /// File info
@@ -99,6 +122,7 @@ namespace GroupDocs.Merger.Cloud.Sdk.Model
           sb.Append("  StartPageNumber: ").Append(this.StartPageNumber).Append("\n");
           sb.Append("  EndPageNumber: ").Append(this.EndPageNumber).Append("\n");
           sb.Append("  RangeMode: ").Append(this.RangeMode).Append("\n");
+          sb.Append("  WordJoinMode: ").Append(this.WordJoinMode).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
         }
