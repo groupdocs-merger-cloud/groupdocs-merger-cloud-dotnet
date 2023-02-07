@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose Pty Ltd" file="JoinItem.cs">
-//  Copyright (c) 2003-2022 Aspose Pty Ltd
+//  Copyright (c) 2003-2023 Aspose Pty Ltd
 // </copyright>
 // <summary>
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,7 +34,7 @@ namespace GroupDocs.Merger.Cloud.Sdk.Model
     using Newtonsoft.Json.Converters;
     
     /// <summary>
-    /// Describes document for join operation
+    /// Describes document for join operation.
     /// </summary>  
     public class JoinItem 
     {                       
@@ -62,9 +62,9 @@ namespace GroupDocs.Merger.Cloud.Sdk.Model
         }
 
         /// <summary>
-        /// Allows to join word documents without empty space between documents
+        /// Allows to join word documents without empty space between documents.
         /// </summary>
-        /// <value>Allows to join word documents without empty space between documents</value>
+        /// <value>Allows to join word documents without empty space between documents.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum WordJoinModeEnum
         { 
@@ -80,17 +80,40 @@ namespace GroupDocs.Merger.Cloud.Sdk.Model
         }
 
         /// <summary>
+        /// Possible modes for the image joining.
+        /// </summary>
+        /// <value>Possible modes for the image joining.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum ImageJoinModeEnum
+        { 
+            /// <summary>
+            /// Enum Horizontal for "Horizontal"
+            /// </summary>            
+            Horizontal,
+            
+            /// <summary>
+            /// Enum Vertical for "Vertical"
+            /// </summary>            
+            Vertical            
+        }
+
+        /// <summary>
         /// Range mode. Ignored if Pages collection is not empty. Default value is AllPages.
         /// </summary>
         public RangeModeEnum? RangeMode { get; set; }
 
         /// <summary>
-        /// Allows to join word documents without empty space between documents
+        /// Allows to join word documents without empty space between documents.
         /// </summary>
         public WordJoinModeEnum? WordJoinMode { get; set; }
 
         /// <summary>
-        /// File info
+        /// Possible modes for the image joining.
+        /// </summary>
+        public ImageJoinModeEnum? ImageJoinMode { get; set; }
+
+        /// <summary>
+        /// File info.
         /// </summary>  
         public FileInfo FileInfo { get; set; }
 
@@ -123,6 +146,7 @@ namespace GroupDocs.Merger.Cloud.Sdk.Model
           sb.Append("  EndPageNumber: ").Append(this.EndPageNumber).Append("\n");
           sb.Append("  RangeMode: ").Append(this.RangeMode).Append("\n");
           sb.Append("  WordJoinMode: ").Append(this.WordJoinMode).Append("\n");
+          sb.Append("  ImageJoinMode: ").Append(this.ImageJoinMode).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
         }
