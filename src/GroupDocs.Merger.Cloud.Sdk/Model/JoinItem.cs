@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose Pty Ltd" file="JoinItem.cs">
-//  Copyright (c) 2003-2023 Aspose Pty Ltd
+//  Copyright (c) 2003-2024 Aspose Pty Ltd
 // </copyright>
 // <summary>
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -80,6 +80,34 @@ namespace GroupDocs.Merger.Cloud.Sdk.Model
         }
 
         /// <summary>
+        /// Compliance mode for the Word Ooxml format
+        /// </summary>
+        /// <value>Compliance mode for the Word Ooxml format</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum WordJoinComplianceEnum
+        { 
+            /// <summary>
+            /// Enum Ecma3762006 for "Ecma376_2006"
+            /// </summary>            
+            Ecma3762006,
+            
+            /// <summary>
+            /// Enum Iso295002008Transitional for "Iso29500_2008_Transitional"
+            /// </summary>            
+            Iso295002008Transitional,
+            
+            /// <summary>
+            /// Enum Iso295002008Strict for "Iso29500_2008_Strict"
+            /// </summary>            
+            Iso295002008Strict,
+            
+            /// <summary>
+            /// Enum Auto for "Auto"
+            /// </summary>            
+            Auto            
+        }
+
+        /// <summary>
         /// Possible modes for the image joining.
         /// </summary>
         /// <value>Possible modes for the image joining.</value>
@@ -106,6 +134,11 @@ namespace GroupDocs.Merger.Cloud.Sdk.Model
         /// Allows to join word documents without empty space between documents.
         /// </summary>
         public WordJoinModeEnum? WordJoinMode { get; set; }
+
+        /// <summary>
+        /// Compliance mode for the Word Ooxml format
+        /// </summary>
+        public WordJoinComplianceEnum? WordJoinCompliance { get; set; }
 
         /// <summary>
         /// Possible modes for the image joining.
@@ -146,6 +179,7 @@ namespace GroupDocs.Merger.Cloud.Sdk.Model
           sb.Append("  EndPageNumber: ").Append(this.EndPageNumber).Append("\n");
           sb.Append("  RangeMode: ").Append(this.RangeMode).Append("\n");
           sb.Append("  WordJoinMode: ").Append(this.WordJoinMode).Append("\n");
+          sb.Append("  WordJoinCompliance: ").Append(this.WordJoinCompliance).Append("\n");
           sb.Append("  ImageJoinMode: ").Append(this.ImageJoinMode).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
