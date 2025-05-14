@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose Pty Ltd" file="PageInfo.cs">
+// <copyright company="Aspose Pty Ltd" file="ApiError.cs">
 //  Copyright (c) Aspose Pty Ltd
 // </copyright>
 // <summary>
@@ -34,29 +34,34 @@ namespace GroupDocs.Merger.Cloud.Sdk.Model
     using Newtonsoft.Json.Converters;
     
     /// <summary>
-    /// Describes page properties
+    /// 
     /// </summary>  
-    public class PageInfo 
+    public class ApiError 
     {                       
         /// <summary>
-        /// Page width in pixels when converted to image
+        /// Gets or sets Code
         /// </summary>  
-        public int? Width { get; set; }
+        public string Code { get; set; }
 
         /// <summary>
-        /// Page height in pixels when converted to image
+        /// Gets or sets Message
         /// </summary>  
-        public int? Height { get; set; }
+        public string Message { get; set; }
 
         /// <summary>
-        /// Document page number
+        /// Gets or sets Description
         /// </summary>  
-        public int? PageNumber { get; set; }
+        public string Description { get; set; }
 
         /// <summary>
-        /// Indicates whether page is visible or not
+        /// Gets or sets DateTime
         /// </summary>  
-        public bool? Visible { get; set; }
+        public DateTime? DateTime { get; set; }
+
+        /// <summary>
+        /// Gets or sets InnerError
+        /// </summary>  
+        public ApiError InnerError { get; set; }
 
         /// <summary>
         /// Get the string presentation of the object
@@ -65,11 +70,12 @@ namespace GroupDocs.Merger.Cloud.Sdk.Model
         public override string ToString()  
         {
           var sb = new StringBuilder();
-          sb.Append("class PageInfo {\n");
-          sb.Append("  Width: ").Append(this.Width).Append("\n");
-          sb.Append("  Height: ").Append(this.Height).Append("\n");
-          sb.Append("  PageNumber: ").Append(this.PageNumber).Append("\n");
-          sb.Append("  Visible: ").Append(this.Visible).Append("\n");
+          sb.Append("class ApiError {\n");
+          sb.Append("  Code: ").Append(this.Code).Append("\n");
+          sb.Append("  Message: ").Append(this.Message).Append("\n");
+          sb.Append("  Description: ").Append(this.Description).Append("\n");
+          sb.Append("  DateTime: ").Append(this.DateTime).Append("\n");
+          sb.Append("  InnerError: ").Append(this.InnerError).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
         }

@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose Pty Ltd" file="DocumentApi.cs">
-//  Copyright (c) 2003-2024 Aspose Pty Ltd
+//  Copyright (c) Aspose Pty Ltd
 // </copyright>
 // <summary>
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -136,6 +136,41 @@ namespace GroupDocs.Merger.Cloud.Sdk.Api
         }
 
         /// <summary>
+        /// Join selected pages from multiple documents into one document 
+        /// </summary>
+        /// <param name="request">Request. <see cref="MixRequest" /></param>
+        /// <returns><see cref="DocumentResult"/></returns>
+        public DocumentResult Mix(MixRequest request)
+        {
+            // verify the required parameter 'options' is set
+            if (request.options == null) 
+            {
+                throw new ApiException(400, "Missing required parameter 'options' when calling Mix");
+            }
+
+            // create path and map variables
+            var resourcePath = this.configuration.GetServerUrl() + "/merger/mix";
+            resourcePath = Regex
+                        .Replace(resourcePath, "\\*", string.Empty)
+                        .Replace("&amp;", "&")
+                        .Replace("/?", "?");
+            var postBody = SerializationHelper.Serialize(request.options); // http body (model) parameter
+            var response = this.apiInvoker.InvokeApi(
+                resourcePath, 
+                "POST", 
+                postBody, 
+                null, 
+                null);
+
+            if (response != null)
+            {
+                return (DocumentResult)SerializationHelper.Deserialize(response, typeof(DocumentResult));
+            }
+
+            return null;
+        }
+
+        /// <summary>
         /// Generate document pages preview 
         /// </summary>
         /// <param name="request">Request. <see cref="PreviewRequest" /></param>
@@ -208,7 +243,7 @@ namespace GroupDocs.Merger.Cloud.Sdk.Api
 }
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose Pty Ltd" file="ImportRequest.cs">
-//  Copyright (c) 2003-2024 Aspose Pty Ltd
+//  Copyright (c) Aspose Pty Ltd
 // </copyright>
 // <summary>
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -264,7 +299,7 @@ namespace GroupDocs.Merger.Cloud.Sdk.Model.Requests
 }
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose Pty Ltd" file="JoinRequest.cs">
-//  Copyright (c) 2003-2024 Aspose Pty Ltd
+//  Copyright (c) Aspose Pty Ltd
 // </copyright>
 // <summary>
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -319,8 +354,64 @@ namespace GroupDocs.Merger.Cloud.Sdk.Model.Requests
     }
 }
 // --------------------------------------------------------------------------------------------------------------------
+// <copyright company="Aspose Pty Ltd" file="MixRequest.cs">
+//  Copyright (c) Aspose Pty Ltd
+// </copyright>
+// <summary>
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
+// 
+//  The above copyright notice and this permission notice shall be included in all
+//  copies or substantial portions of the Software.
+// 
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+//  SOFTWARE.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
+
+namespace GroupDocs.Merger.Cloud.Sdk.Model.Requests 
+{
+    using GroupDocs.Merger.Cloud.Sdk.Model; 
+
+    /// <summary>
+    /// Request model for <see cref="GroupDocs.Merger.Cloud.Sdk.Api.DocumentApi.Mix" /> operation.
+    /// </summary>  
+    public class MixRequest  
+    {
+          /// <summary>
+          /// Initializes a new instance of the <see cref="MixRequest"/> class.
+          /// </summary>        
+          public MixRequest()
+          {
+          }
+
+          /// <summary>
+          /// Initializes a new instance of the <see cref="MixRequest"/> class.
+          /// </summary>
+          /// <param name="options">Mix options</param>
+          public MixRequest(MixPagesOptions options)             
+          {
+              this.options = options;
+          }
+          
+          /// <summary>
+          /// Mix options
+          /// </summary>  
+          public MixPagesOptions options { get; set; }
+    }
+}
+// --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose Pty Ltd" file="PreviewRequest.cs">
-//  Copyright (c) 2003-2024 Aspose Pty Ltd
+//  Copyright (c) Aspose Pty Ltd
 // </copyright>
 // <summary>
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -376,7 +467,7 @@ namespace GroupDocs.Merger.Cloud.Sdk.Model.Requests
 }
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose Pty Ltd" file="SplitRequest.cs">
-//  Copyright (c) 2003-2024 Aspose Pty Ltd
+//  Copyright (c) Aspose Pty Ltd
 // </copyright>
 // <summary>
 //  Permission is hereby granted, free of charge, to any person obtaining a copy

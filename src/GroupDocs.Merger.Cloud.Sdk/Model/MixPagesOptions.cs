@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose Pty Ltd" file="JoinItem.cs">
+// <copyright company="Aspose Pty Ltd" file="MixPagesOptions.cs">
 //  Copyright (c) Aspose Pty Ltd
 // </copyright>
 // <summary>
@@ -34,33 +34,10 @@ namespace GroupDocs.Merger.Cloud.Sdk.Model
     using Newtonsoft.Json.Converters;
     
     /// <summary>
-    /// Describes document for join operation.
+    /// Defines options for documents JoinPages method
     /// </summary>  
-    public class JoinItem 
+    public class MixPagesOptions 
     {                       
-        /// <summary>
-        /// Range mode. Ignored if Pages collection is not empty. Default value is AllPages.
-        /// </summary>
-        /// <value>Range mode. Ignored if Pages collection is not empty. Default value is AllPages.</value>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum RangeModeEnum
-        { 
-            /// <summary>
-            /// Enum AllPages for "AllPages"
-            /// </summary>            
-            AllPages,
-            
-            /// <summary>
-            /// Enum OddPages for "OddPages"
-            /// </summary>            
-            OddPages,
-            
-            /// <summary>
-            /// Enum EvenPages for "EvenPages"
-            /// </summary>            
-            EvenPages            
-        }
-
         /// <summary>
         /// Allows to join word documents without empty space between documents.
         /// </summary>
@@ -126,11 +103,6 @@ namespace GroupDocs.Merger.Cloud.Sdk.Model
         }
 
         /// <summary>
-        /// Range mode. Ignored if Pages collection is not empty. Default value is AllPages.
-        /// </summary>
-        public RangeModeEnum? RangeMode { get; set; }
-
-        /// <summary>
         /// Allows to join word documents without empty space between documents.
         /// </summary>
         public WordJoinModeEnum? WordJoinMode { get; set; }
@@ -146,24 +118,19 @@ namespace GroupDocs.Merger.Cloud.Sdk.Model
         public ImageJoinModeEnum? ImageJoinMode { get; set; }
 
         /// <summary>
-        /// File info.
+        /// Source documents for JoinPages operation
         /// </summary>  
-        public FileInfo FileInfo { get; set; }
+        public List<FileInfo> Files { get; set; }
 
         /// <summary>
-        /// List of page numbers to use in a Join operation. NOTE: page numbering starts from 1.
+        /// Page numbers for document indicies in Files collection.
         /// </summary>  
-        public List<int?> Pages { get; set; }
+        public List<MixPagesItem> FilesPages { get; set; }
 
         /// <summary>
-        /// Start page number. Ignored if Pages collection is not empty.
+        /// The output path
         /// </summary>  
-        public int? StartPageNumber { get; set; }
-
-        /// <summary>
-        /// End page number. Ignored if Pages collection is not empty.
-        /// </summary>  
-        public int? EndPageNumber { get; set; }
+        public string OutputPath { get; set; }
 
         /// <summary>
         /// Get the string presentation of the object
@@ -172,12 +139,10 @@ namespace GroupDocs.Merger.Cloud.Sdk.Model
         public override string ToString()  
         {
           var sb = new StringBuilder();
-          sb.Append("class JoinItem {\n");
-          sb.Append("  FileInfo: ").Append(this.FileInfo).Append("\n");
-          sb.Append("  Pages: ").Append(this.Pages).Append("\n");
-          sb.Append("  StartPageNumber: ").Append(this.StartPageNumber).Append("\n");
-          sb.Append("  EndPageNumber: ").Append(this.EndPageNumber).Append("\n");
-          sb.Append("  RangeMode: ").Append(this.RangeMode).Append("\n");
+          sb.Append("class MixPagesOptions {\n");
+          sb.Append("  Files: ").Append(this.Files).Append("\n");
+          sb.Append("  FilesPages: ").Append(this.FilesPages).Append("\n");
+          sb.Append("  OutputPath: ").Append(this.OutputPath).Append("\n");
           sb.Append("  WordJoinMode: ").Append(this.WordJoinMode).Append("\n");
           sb.Append("  WordJoinCompliance: ").Append(this.WordJoinCompliance).Append("\n");
           sb.Append("  ImageJoinMode: ").Append(this.ImageJoinMode).Append("\n");

@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose Pty Ltd">
+// <copyright company="Aspose Pty Ltd" file="MixPagesItem.cs">
 //  Copyright (c) Aspose Pty Ltd
 // </copyright>
 // <summary>
@@ -23,61 +23,43 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-using GroupDocs.Merger.Cloud.Sdk.Api;
-using GroupDocs.Merger.Cloud.Sdk.Client;
-
-namespace GroupDocs.Merger.Cloud.Sdk.Test.Api
+namespace GroupDocs.Merger.Cloud.Sdk.Model 
 {
-    using NUnit.Framework;
-
-    public class AuthApiTests
-    {
+    using System;  
+    using System.Collections;
+    using System.Collections.Generic;
+    using System.Runtime.Serialization;
+    using System.Text;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+    
+    /// <summary>
+    /// Defines item options for documents MixPages method
+    /// </summary>  
+    public class MixPagesItem 
+    {                       
         /// <summary>
-        /// Test Auth Error
-        /// </summary>
-        [Test]
-        public void AuthErrorWhenAppSidNotFoundTest()
-        {
-            var appSid = "test";
-            var appKey = "test";
-
-            var mergerConfig = new Configuration(appSid, appKey)
-            {
-                ApiBaseUrl = Config.ApiBaseUrl
-            };
-
-            var mergerApi = new InfoApi(mergerConfig);
-
-            var ex = Assert.Throws<ApiException>(() =>
-            {
-                mergerApi.GetSupportedFileFormats();
-            });
-
-            Assert.AreEqual("invalid_client", ex.Message);
-        }
+        /// Index of the file from MixPagesOptions.Files collection.
+        /// </summary>  
+        public int? FileIndex { get; set; }
 
         /// <summary>
-        /// Test Auth Error
+        /// List of page numbers to use in a MixPages operation. NOTE: page numbering starts from 1.
+        /// </summary>  
+        public List<int?> Pages { get; set; }
+
+        /// <summary>
+        /// Get the string presentation of the object
         /// </summary>
-        [Test]
-        public void AuthErrorWhenAppKeyNotFoundTest()
+        /// <returns>String presentation of the object</returns>
+        public override string ToString()  
         {
-            var appSid = Config.AppSid;
-            var appKey = "test";
-
-            var mergerConfig = new Configuration(appSid, appKey)
-            {
-                ApiBaseUrl = Config.ApiBaseUrl
-            };
-
-            var mergerApi = new InfoApi(mergerConfig);
-
-            var ex = Assert.Throws<ApiException>(() =>
-            {
-                mergerApi.GetSupportedFileFormats();
-            });
-
-            Assert.AreEqual("invalid_client", ex.Message);
+          var sb = new StringBuilder();
+          sb.Append("class MixPagesItem {\n");
+          sb.Append("  FileIndex: ").Append(this.FileIndex).Append("\n");
+          sb.Append("  Pages: ").Append(this.Pages).Append("\n");
+          sb.Append("}\n");
+          return sb.ToString();
         }
     }
 }

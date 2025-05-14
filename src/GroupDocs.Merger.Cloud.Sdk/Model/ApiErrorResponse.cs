@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose Pty Ltd">
+// <copyright company="Aspose Pty Ltd" file="ApiErrorResponse.cs">
 //  Copyright (c) Aspose Pty Ltd
 // </copyright>
 // <summary>
@@ -23,61 +23,43 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-using GroupDocs.Merger.Cloud.Sdk.Api;
-using GroupDocs.Merger.Cloud.Sdk.Client;
-
-namespace GroupDocs.Merger.Cloud.Sdk.Test.Api
+namespace GroupDocs.Merger.Cloud.Sdk.Model 
 {
-    using NUnit.Framework;
-
-    public class AuthApiTests
-    {
+    using System;  
+    using System.Collections;
+    using System.Collections.Generic;
+    using System.Runtime.Serialization;
+    using System.Text;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+    
+    /// <summary>
+    /// 
+    /// </summary>  
+    public class ApiErrorResponse 
+    {                       
         /// <summary>
-        /// Test Auth Error
-        /// </summary>
-        [Test]
-        public void AuthErrorWhenAppSidNotFoundTest()
-        {
-            var appSid = "test";
-            var appKey = "test";
-
-            var mergerConfig = new Configuration(appSid, appKey)
-            {
-                ApiBaseUrl = Config.ApiBaseUrl
-            };
-
-            var mergerApi = new InfoApi(mergerConfig);
-
-            var ex = Assert.Throws<ApiException>(() =>
-            {
-                mergerApi.GetSupportedFileFormats();
-            });
-
-            Assert.AreEqual("invalid_client", ex.Message);
-        }
+        /// Gets or sets RequestId
+        /// </summary>  
+        public string RequestId { get; set; }
 
         /// <summary>
-        /// Test Auth Error
+        /// Gets or sets Error
+        /// </summary>  
+        public ApiError Error { get; set; }
+
+        /// <summary>
+        /// Get the string presentation of the object
         /// </summary>
-        [Test]
-        public void AuthErrorWhenAppKeyNotFoundTest()
+        /// <returns>String presentation of the object</returns>
+        public override string ToString()  
         {
-            var appSid = Config.AppSid;
-            var appKey = "test";
-
-            var mergerConfig = new Configuration(appSid, appKey)
-            {
-                ApiBaseUrl = Config.ApiBaseUrl
-            };
-
-            var mergerApi = new InfoApi(mergerConfig);
-
-            var ex = Assert.Throws<ApiException>(() =>
-            {
-                mergerApi.GetSupportedFileFormats();
-            });
-
-            Assert.AreEqual("invalid_client", ex.Message);
+          var sb = new StringBuilder();
+          sb.Append("class ApiErrorResponse {\n");
+          sb.Append("  RequestId: ").Append(this.RequestId).Append("\n");
+          sb.Append("  Error: ").Append(this.Error).Append("\n");
+          sb.Append("}\n");
+          return sb.ToString();
         }
     }
 }
