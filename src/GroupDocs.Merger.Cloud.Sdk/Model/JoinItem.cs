@@ -156,6 +156,11 @@ namespace GroupDocs.Merger.Cloud.Sdk.Model
         public List<int?> Pages { get; set; }
 
         /// <summary>
+        /// Indicates if PDF accessibility (tagged PDF structure) should be preserved during merge.
+        /// </summary>
+        public bool? PreserveAccessibility { get; set; }
+
+        /// <summary>
         /// Start page number. Ignored if Pages collection is not empty.
         /// </summary>  
         public int? StartPageNumber { get; set; }
@@ -181,6 +186,7 @@ namespace GroupDocs.Merger.Cloud.Sdk.Model
           sb.Append("  WordJoinMode: ").Append(this.WordJoinMode).Append("\n");
           sb.Append("  WordJoinCompliance: ").Append(this.WordJoinCompliance).Append("\n");
           sb.Append("  ImageJoinMode: ").Append(this.ImageJoinMode).Append("\n");
+          sb.Append("  PreserveAccessibility: ").Append(this.PreserveAccessibility).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
         }

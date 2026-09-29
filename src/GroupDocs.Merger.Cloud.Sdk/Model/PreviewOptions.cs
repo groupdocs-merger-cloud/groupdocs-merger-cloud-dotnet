@@ -72,6 +72,11 @@ namespace GroupDocs.Merger.Cloud.Sdk.Model
         public int? Width { get; set; }
 
         /// <summary>
+        /// Preview image resolution (DPI). When 0, the default resolution is used.
+        /// </summary>
+        public int? Resolution { get; set; }
+
+        /// <summary>
         /// Preview height
         /// </summary>  
         public int? Height { get; set; }
@@ -85,6 +90,7 @@ namespace GroupDocs.Merger.Cloud.Sdk.Model
           var sb = new StringBuilder();
           sb.Append("class PreviewOptions {\n");
           sb.Append("  Width: ").Append(this.Width).Append("\n");
+          sb.Append("  Resolution: ").Append(this.Resolution).Append("\n");
           sb.Append("  Height: ").Append(this.Height).Append("\n");
           sb.Append("  Format: ").Append(this.Format).Append("\n");
           sb.Append("}\n");

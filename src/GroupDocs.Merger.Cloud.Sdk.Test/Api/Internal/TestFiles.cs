@@ -29,26 +29,26 @@ namespace GroupDocs.Merger.Cloud.Sdk.Test.Api.Internal
 {
     public static class TestFiles
     {
-        public static readonly TestFile OnePageDocx = new TestFile("one-page.docx", "words\\");
+        public static readonly TestFile OnePageDocx = new TestFile("one-page.docx", "words/");
         public static readonly TestFile NotExist = new TestFile("NotExist.docx", "some-folder/");
-        public static readonly TestFile PasswordProtectedDocx = new TestFile("password-protected.docx", "words\\")
+        public static readonly TestFile PasswordProtectedDocx = new TestFile("password-protected.docx", "words/")
         {
             Password = "password"
         };
 
-        public static readonly TestFile FourPagesDocx = new TestFile("four-pages.docx", "words\\");
+        public static readonly TestFile FourPagesDocx = new TestFile("four-pages.docx", "words/");
 
-        public static readonly TestFile TenPagesPdf = new TestFile("ten-pages.pdf", "pdf\\");
-        public static readonly TestFile OnePageProtectedPdf = new TestFile("one-page-password.pdf", "pdf\\")
+        public static readonly TestFile TenPagesPdf = new TestFile("ten-pages.pdf", "pdf/");
+        public static readonly TestFile OnePageProtectedPdf = new TestFile("one-page-password.pdf", "pdf/")
         {
             Password = "password"
         };
-        public static readonly TestFile FourSheetsXlsx = new TestFile("four-sheets.xlsx","cells\\");
-        public static readonly TestFile FourSheetsProtectedXlsx = new TestFile("four-sheets-protected.xlsx", "cells\\")
+        public static readonly TestFile FourSheetsXlsx = new TestFile("four-sheets.xlsx","cells/");
+        public static readonly TestFile FourSheetsProtectedXlsx = new TestFile("four-sheets-protected.xlsx", "cells/")
         {
             Password = "password"
         };
-        public static readonly TestFile Txt = new TestFile("document.txt", "txt\\");
+        public static readonly TestFile Txt = new TestFile("document.txt", "txt/");
 
 
         public static IEnumerable<TestFile> TestFilesList
